@@ -92,19 +92,7 @@ console.log(c); // 30
 //   So you have different ways of declaring in different types of languages,but the idea is you declare 
 //   when you want to create a new variable,you create a new variable,a placeholder and then you give it 
 //   a name. 
-//   var value;
-// =>Definition: is when you assign a value to that variable:
-// value = 42;
-// Between these two lines,between declaration and definition these again depend on the language,different
-// languages have different ways of handling the space between when the variable is declared and the variable
-// is defined in the case of Javascript however as soon as the variable is declared the minute you say var a 
-// or var value or var foo there is an explicit value and assign to that varible,even though you are not assigning
-// the value yourself there is a value being assigned to it and that value is undefined.
-// Its basically javascripts way of saying you have declared it but you havn't defined it.so the variable at this point
-// of time is undefined. 
-// What is the value undefined which type is the value 
-
-
+// 
 
 
 
