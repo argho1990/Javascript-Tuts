@@ -232,6 +232,153 @@ console.log(a);//null
 // In order to identify what the type of the variable is you say typeof<variable>
 // You can aslo do is with a value.
 
+var a;
+console.log(typeof a);//undefined
+
+var a = 10;
+console.log(typeof a);//number
+
+a = "Hello";
+console.log(typeof a);//string
+
+a = "true";
+console.log(typeof a);//boolean
+
+a = null;
+console.log(typeof a);//object --> should show Null.
+// This is one of the things that has frustated so many Javascript Programmers.
+// This turns out to be a bug in Javascript type of Null should ideally be null because null is a datatype.
+// which contains the value null.
+// but in the intial implementations of Javascript.
+// turns out they choose type of null to return an Object.
+// and even though now the creator of Javascript and the team that worked on the initial versions of 
+// Javascript admit that its is a bug they cannot fix it because it could potentially break older code 
+// that depends on this behaviour.
+// So this bug still exists in Javascript today.
+
+//How do you figure out whether a variable is null or not?
+//You can compare it to the value Null.
+// Its an operator that follows a value or a variable and then it gives out what the type of that value or variable is.
+// as long as it's not Null in the case of Null its going to return an Object.
+
+
+
+
+
+//Type Coersion:
+// This is something that javascriot does automatically.
+// There are similarities in languages like Java there are similar things which happen but just want to highlight that
+// something that happens in Javascript.
+// what is type coersion?
+// Type Coersion is where you have variables declared with and assigned to a value.
+// And you are operating on those variables.
+// And there are certain points of time.
+// where the interpreter or the compiler will have to do some automatic type conversions for you in order to make that 
+// operation work
+// So lets say you are dealing with some values of different types.
+// You are adding them or you are doing some operations with them.
+// There is no way those operations can work unless there is some automatic type conversion that happens.
+// So this is usually called type coersion.
+// A standard example is concatenation.
+// with string values.
+// Lets say you have something like this.
+// 123 + "4" => "1234" --> string
+// So what the interpreter does is looks at the first value which is a number
+// and its added to the second value which is a string,it obviously cannot work.
+// You cannot add a number to a String.
+// So atleast one of those two values have to be converted to the other type so that they both belong to the same type/
+// So what the javascript interpreter does is it takes the number and converts it into a string.
+// So,the number 123 becomes the string 1 2 3 and then it appends 4 to it.
+// So,you get 1 2 3 4 which is a String.
+// This is something that behaves like you would expect it to.but remember that there is type coersion that 
+// happens and remember Javascript does a lot of type coersion which is not what you would expect it to.
+
+
+//The == Operator:
+//What is lot common in a lot of programming languages is that the single equals is usually taken up for the
+// assignment operation.
+a = b // the value of b assigned to a.
+// = is always taken for assignment.
+// So when you want to compare 2 values,you would typically use "==".
+// Because '=' has a completely different meaning
+// This exists in all programming languages.
+// So the "=="  compares those 2 values and return a boolean.
+// true or false depending on the values of those two.
+// In javascript does kind of the same thing but it goes one level beyond what you would expect it to do.
+// Example:
+
+var a = 10;
+var b = 10;
+
+if (a == b) {
+
+    console.log("Values are equal");
+}
+
+//O.P> Values are equal
+
+//So what's different in the case of Javascript.
+
+// Lets say instead of having a value of a number for B.
+// have a value which is a string.
+
+var b = "10";
+
+//O.P still shows values are equal.
+
+//When javascript was created it was meant to be easy for people to get into
+//and use.
+//Interpreter is very forgiving.
+//It makes assumptions,it tries to cover up what could potentially be mistakes.
+//In an attempt to do that what the interpreter aslo does is.It makes a whole lot 
+//of mistakes on its own.
+//So when the "==" was designed in Javascript.
+//When javascript was being created.
+//They wanted to make it super friendly.
+//They wanted to make it a common data and understanding.
+//So what they decided was lets say you have 2 values and you are trying to compare the two.
+//If one of those values can automatically be type converted to the other.
+//Do the type conversion and then check and see if they are the same.
+//So when the == operator was designed for javascript,they decided to do the exact same thing,so if 
+//You are doing a "==" and there values are of 2 different types,the javascript interpreter tries to 
+//Convert one of them to the other and then see if it matches.
+//So what javascript is doing here is its says its a number 10,this is a string 10,they are obviously not 
+//equal so probably the developer needs some help here so it converts the number to a string and then sees
+// if those 2 match if the block gets executed.This all kinds of bad.
+// You wouldnt want to do something like this.'
+// So when the language started rolled out and the people started using the double equals,people started
+// getting frustated we going to change but now cannot because that's the thing about languages.
+// Once you roll something out,it hard to change because when you change something,it very likely that the
+// people code is going to break.
+
+//They introduced a new operator the "===".
+//Javascript has a "===" operator which does the comparision like you would expect it to.
+//It doesnt do type conversion.
+//If two values are compared with a "===" operator are of different types,it is going to return 
+//false.
+
+var a = 10;
+var b = "10";
+
+if (a === b) {
+
+    console.log("Values are equal");
+}
+
+// So this "===" takes the place of  "==".
+
+// Type Coersion Summary:
+
+// Where you can do something like where you do in C.
+// Passing the value to an If Block.
+var a;
+if (a) {
+    console.log("Values are equal");
+}
+
+// Something like this will not work in java.
+
+
 
 
 
