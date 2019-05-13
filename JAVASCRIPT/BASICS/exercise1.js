@@ -113,6 +113,140 @@ console.log(c); // 30
 // So you can be sure if a variable is declared you havnt assigned a value to it,it is going to contain one value which is undefined
 // which is of the type undefined.
 
+//var value; ---> value is "undefined"
+
+/// value = 42;
+
+//Understanding Null:
+
+//Null is another type in javascript which contains one possible value which is null so thats the type 
+//system with only one possible value.Its kind a like undefined.
+// So just like undefined is a type for just one value undefined and null is a type which is one value null.
+// Let me demonstrate the undefined and null so that they know how they look like,just like you can allocate 
+// values like boolean and string you can allocate values like undefined and null.
+// Let say 
+var a;
+console.log(a);// undefined.
+// Until you give a value to a variable it is going to have the value undefined.
+// When the console is holding the old value un Scratchpad:Right Click + Reload and Run.
+// When you dont do this you are basically running statements one after the other so it remembers the
+// previous state so in order to have a clean context always clear this and then right click and say
+// reload and run.
+// When I do that you get the actual value which is undefined.
+
+var a;
+a = false;
+console.log(a);
+// change this to a = null;
+a = null;
+console.log(a);//null
+//I have cleared out the value of a and have made it as null.
+
+// I am explicitly saying that I want a to contain a non value.
+
+
+//Difference between Null and undefined.
+// both seem to be non valued.
+// They are not values,they indicate the absence of a value.
+// So what's is the difference between the two and when do you use?
+// So, the best analogy that I can give for undefined versus null is when you are filling a paper
+// form.
+// So,you are filling a paper form which has a bunch of fields and bunch of text areas for you to write on
+// Now if you get a paper form that somebody else will already fill right and you look at a field which is blank
+// how do you know if that field is not something that the user saw and wrote something on or if that field is 
+// something thats not applicable to the user.
+// So lets say somebody has filled the form and they are giving it to you and the field is empty.
+// Does it mean that they have actually read the question and they dont have an answer.
+// or did they not read the question at all.
+// In order to differentiate between these two categories.
+// What people typically do is when they have,when they read a question and they dont have it,you know its something
+// that doesnt apply to them,the question doesnt make sense to them,it doesnt fit their particular situation.
+// What they do is they write not applicable,they write N/A.
+// So the not applicable value is something that indicates that the user is actually provided some answers there and the
+// answer is a non value.
+// This is compared to an empty field where the value hasnt been provided.
+// So keep that analogy in mind.when you think about the difference between undefined and null.
+// When a variable is undefined that means that the value has not been entered,its an empty farm field nothing 
+// has been put into the variable.
+// and this is what happens by defualt.
+// The minute you declare a variable and you dont assign it a value,it gets the value of undefined.
+// That means the variable hasn't been allocated with the value.
+// However if you want to assign a value which is a non value.
+// Lets say you wanna say this is not an untouched variable.
+// I am allocating a value to it but the value happens to be empty.
+// The value is a non value.
+// Thats when you explicitly assign the value null to it.
+// Lets say for instance I dont have a middle name and lets say I am creating a bunch of fields
+// for my first name,middle name and last name.
+// In the case of my middle name it is a non value.
+// Rather than having var as middle name and then have it undefined.
+// In which case I were to give that variable to somebody else,they wouldnt know,if I forgot to put 
+// the middle name in there or if I dont have a middle name.
+// So you are not explicitly making it very clear to the other person that I dont not have a middle name,
+// I assign the value invalid to it.
+// So I say middle name equals null.
+// So when I hand over the middle name to some other piece of code.they will look at it and go.
+// Okay,its not an undefined variable,so they have actually put a value in there called null.
+// So this person doesnt not have a middle name.
+
+// These are the complete list of data types actually.
+
+// In the Ecmascript 5 version of the specification however like I told you before the latest version is
+// Ecmascript 6 and ECMA 6 comes with one other primitive type.
+// There is a new primitive type added to the javascript language and that type is Symbol.
+
+// ECMA 5 is the most supported version as of today.
+
+// Symbol is kind of an enumeration in languages like C++ and Java.
+// Its a bunch of values,bunch of constants and the varible can be one of those values.
+// So thats the symbol datatype.
+// Browser fully dont support.
+// New primitive data types in the newer version of Javascript.
+
+// Summary:Types and Variables.
+// We dont need to declare a variable type when you are declaring a variable.
+// All you need to do is use the var keyword.
+// and then give it a name.
+// and javascript knows it a variable.
+// its going to allocate space for that variable.
+// the varible name and the same variable name can be assigned values of different types.
+// You can take undefined and assign it to a variable that was holding a boolean for instance.
+// There is no scoping information in the variable declarations.
+// If you compare it to things like a Java where you have a private in something or a public in something.
+// They have scoping information which tie in with the class model of Java but in the case of Javascript,
+// scopes are actually inferred from something else.
+
+
+// Variables and values can be interrogated:
+// Now in the case of Java or C++, a variable can contain only one type and its very clear what type that variable
+// contains because you can look up the declaration and see what type it was declared.
+// int a always has to have the type integer.
+// Its obvious what the type is but now in the case of Javascript,there is no way of knowing it.
+// Its basically when you are looking at a variable.
+// the type is basically what type it holds at point of time.
+// It will hold a completely different type later.
+// So its important to be able to find out what type the varible is.Its not static,you have to figure it out
+// dynamically.So how do you find out given a varible what is its type?
+// The fee to do is using an Operator: 
+// called typeof<value> that comes with javascript.
+// In order to identify what the type of the variable is you say typeof<variable>
+// You can aslo do is with a value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
