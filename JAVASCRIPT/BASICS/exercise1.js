@@ -93,6 +93,27 @@ console.log(c); // 30
 //   when you want to create a new variable,you create a new variable,a placeholder and then you give it 
 //   a name. 
 // 
+// =>Definition: is when you assign a value to that variable:
+// value = 42;
+// Between these two lines,between declaration and definition these again depend on the language,different
+// languages have different ways of handling the space between when the variable is declared and the variable
+// is defined in the case of Javascript however as soon as the variable is declared the minute you say var a 
+// or var value or var foo there is an explicit value and assign to that varible,even though you are not assigning
+// the value yourself there is a value being assigned to it and that value is undefined.
+// Its basically javascripts way of saying you have declared it but you havn't defined it.so the variable at this point
+// of time is undefined. 
+// What is the value undefined which type is the value undefined belongs to?
+// Javascript has created a seperate type called undefined which contains just one value which is undefined.
+// This can be a bit confusing but stick with me here,in the case of a boolean type how many values are possible in a boolean
+// type you have true and you have false.There can be two possible values in a boolean type,in the case of the 
+// undefined type there is actually one value possible which is undefined,so the whole type system has only one value,so the 
+// value is undefined and whenever you have a var something,there is no type information to it but I told you javascript is a
+// losely typed so it doesnt have type information that its a number or a string or whatever,what is does have is the assignment
+// of the type undefined. 
+// So you can be sure if a variable is declared you havnt assigned a value to it,it is going to contain one value which is undefined
+// which is of the type undefined.
+
+
 
 
 

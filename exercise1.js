@@ -102,7 +102,7 @@ console.log(c); // 30
 // the value yourself there is a value being assigned to it and that value is undefined.
 // Its basically javascripts way of saying you have declared it but you havn't defined it.so the variable at this point
 // of time is undefined. 
-// What is the value undefined which type is the value 
+// What is the value undefined which type is the value?
 
 
 
