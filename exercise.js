@@ -71,7 +71,7 @@
 
 //-> To do client side web development.
 //-> Javascript is very often used on the browser.
-//-> rich client side applications on the user's browser.
+//-> Rich Client Side Applications on the user's browser.
 //-> learn javascript build that functionality on that browser.
 //-> You can do this in Native Javascript in this case you have pure javascript.
 //-> No frameworks you access a DOM tree and then you modify the page,you had you
@@ -100,6 +100,44 @@
 //-> of the browser a lot of those add-ons are build using javascript.
 //-> You can also build desktop applications with so there are some frameworks which let you build both desktop as well as
 //-> mobile applications.
+//-> Javascript is gaining in popularity with the IOT Applications.
+//-> This is not something which is really kind of matured.
+
+
+//=> History Of Javascript:
+
+//-> created by brendan Eich at Netscape.
+//-> Java was popular in those days.
+//-> Java had the concept of Applets which lets you build client side applications.
+//-> Rich Application Client Side Application those days.
+//-> So it was the rich client side Application Model those days.
+//-> Create Applets and have this rich client experience on the browser.
+
+// Brendan was asked to create a language for the browser and he created this language.He called it Live Script
+// but the people wanted to use the popularity of Java in those days and called in Javascript.
+
+// Javascript has nothing to do with Java purely because of marketing reason.
+// created to compliment Java.
+// Javascript was created in roughly 10 days rushed to production full of bugs.
+// to make it easy to use.
+// easy for new comers.
+// Once javascript was created there was rush to make it a standard,the competition between Microsoft and Netsacape.
+// But netscape wanted to standardize the language.When we say standardized we say there is a specification for
+// the langauage and once you follow the specification any browser that claims to run javascript should work with the
+// the language that is built according to the specification so Javascript was standardized by a committee called
+// Ecma and the name got assigned as Ecmascript.When you hear the name as Ecmascript it is nothing differnt from
+// Javascript.
+// Now there are differnet versions of Ecmascript right now the latest version of Ecmascript is 6.
+
+// ECMASCRIPT is not fully supported around browsers the best chances of a fully supported specification is
+// Ecmascript 5. 
+
+
+
+
+
+
+
 
 
 //used in many non-browswe environments as well.
