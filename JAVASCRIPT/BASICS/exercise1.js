@@ -378,6 +378,60 @@ if (a) {
 
 // Something like this will not work in java.
 
+//Lets say I wanna do something like this:
+
+var a = 10;
+if (a) {
+    console.log("a is true");
+}
+
+// O.P -> a is true.
+// You see if a has a non-zero value like 10.
+// Its going to return true.
+// If a has a value zero then it return false.
+// So every value in javascript has a corresponding boolean value.
+// Let's say I change a to -10.
+// a is still true.
+// For all non-zero values a is true.
+
+var a = "Hello";//Any other string as long as it has atleast one character it is true.
+if (a) {
+    console.log("a is true");
+}
+
+//O.P is true.
+
+
+var a = "";//Empty string is false
+
+var a;
+if (a) {
+    console.log("a is true");
+}
+else {
+    console.log("a is false")
+}
+
+//O.P is false.
+
+
+var a = undefined;//O.P --> false.
+var a = null;//OP --> false.
+
+var a = true;//OP --> true.
+var a = false;//OP --> false.
+
+// Summarize: Type Coersion
+
+// Javascript is "flexible" with typing
+// Values of all types have an associated Boolean Value.
+// You dont have to have a boolean in an if block or a while block instead.
+// You can have value of a different type and each of those values have a corresponding boolean value.
+// Always use === for precise checks (both value and type) match.
+// When you want to check both the value and the type match if you just use a double equals javascript could 
+// potentially do type coersion and see if the coerced type matches which might not what you want sometimes.
+// I personally choose "===" all the time.
+// Because I want to have both type and value checks.
 
 
 
