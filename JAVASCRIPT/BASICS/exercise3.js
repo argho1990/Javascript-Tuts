@@ -354,8 +354,8 @@ var myObj = {
     "objProp": {} // can be an Empty Object.
     objProp: {
 
-        innerProp: "Inner Property"
-        ​​
+        innerProp: "Inner Property",
+
         newInner: "new inner value"
 
     }
@@ -653,12 +653,13 @@ myArray.length
 // So when you are accessing myArray,you are basically accessing. 
 // Object.property work the same. 
 
-//A lot of things work the same way when it comes to Objects.
+//A lot of things we have covered before work the same way when it comes to Objects.
 //For instance:
 
-
 var myArray2 = myArray;
+
 //So I have an array pointing to the same location so I can say 
+
 myArray2[3];
 //O.P -> "JavaBrains"
 //Its still at the same location.
@@ -688,19 +689,19 @@ myArray2[3];
 //In order to demonstrate that say If I were to access.
 
 myArray[0];//Hello
-//What if were to tell you that myArray is an object with property 0.
+//What if were to tell you that myArray is an object with property 0?
 //Let me prove that by doing this:
 myArray["0"];//pass in the string 0 //"Hello"
 // Can I use the dot notation?I obviously cannot.
 // If the property notation happens to be a number,you cannot use the dot notation.
 // You have to use the [] bracket notation.
 
-// When you are creating an Object you are basically creating an Object where the property names are just
-// numbers.
+// When you are creating an Object you are basically creating an Object where the property names
+// are just numbers.
 //Thats actually an Array is driven by an Object underneath.
 
 // If this myArray is actually an Object which has properties named 0,1,2,3
-//How does this work myArray[0] I am passing a number and not a string myArray["0"].
+// How does this work myArray[0] I am passing a number and not a string myArray["0"].
 // The reason that this works is actually Javascript converting that 0 which is a number to a string
 // automatically.
 // This is another instance of type coersion where Javascript looks at your object reference here which is
@@ -708,14 +709,48 @@ myArray["0"];//pass in the string 0 //"Hello"
 // happens to be a number so the javascript interpreter converts that to a string and looks that up for you.
 // There is implicit conversion thats happening.
 // There is no restriction as what name you can give to a particular index
-// You get undefined which shouldnt be a surprise what happens when you accesss a property that doesnt exist 
+// You get undefined which shouldn't be a surprise what happens when you accesss a property that doesnt exist 
 // on an Object,you get undefined its exactly the same thing here.
 myArray[4];//undefined.
-// But lets say I set the value here 
+// But lets say I set the value here, 
 myArray[4] = "bar";
 // O.P -> "bar"
-// You can access myArray and it has those truly names and not indexes I can pick any name.
-// Turns around I can 
+// You can access myArray.
+// If these were truly names and not indexes,I can pick any name turns out I can.
+// Array before: Array{"Hello","World","JS","JavaBrains"}
+// I can say myArray[400]="baz",just a property just a name.
+// I can just set the value to index 400  and it still works.
+// check the status of myArray.
+// Array ["Hello","World","JS","JavaBrains","foo","bar",<5 empty slots>,391 more...]
+// 0:"Hello"
+// 1:"World"
+// 2:"JS"
+// 3: "Javabrains"
+// 4: "bar"
+// 400:"baz"
+// length:401
+// The length property say its 401.
+// So,the length doesnt count how many elements properties you have in the array Object,
+// it counts the index of the last element,the greatest element as a number and then its adds
+// 1 to it,because its a zero based index,so the length in this array is 401.
+// Its an interesting implication to keep in mind,but yeah in essence arrays are freeform,
+// you can assign any property here,the only limitation is whatever you assign has to be a number 
+// for it to be treated as an array index. 
+// You can assign a property which is not a number.
+// myArray["foo"] = "abc" --> O.P --> "abc".
+// If I were to get an array, I get a property:
+// 0:"Hello"
+// 1:"World"
+// 2:"JS"
+// 3: "Javabrains"
+// 4: "bar"
+// foo:"abc" <----It just sitting there with the other number indexes 
+// 400:"baz"  but notice the length hasnt changed,its still 401.
+// length:401
+// If we want to treat an array as an array,always choose the number properties.
+// You can treat it as an object and add more properties to it and thats where you know you
+// realize that its actually an object underneath.
+// ******************************************************************
 
 
 
@@ -724,7 +759,11 @@ myArray[4] = "bar";
 
 
 
-.
+
+
+
+
+
 
 
 
