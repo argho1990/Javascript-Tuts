@@ -806,6 +806,113 @@ var greeting = "Hello World";
 // when you do it javascript intelligently converts from the primitive to the Object just to 
 // make the Operation Work.
 //*****************************************************//
+//Functions:
+// In this unit we will try and understand what Javascript functions are in and how we can use them,at 
+// the basic level a function in javascript is very similar to functions in other programming languages,
+// Function is basically a piece of code,a few statement and even one statement,which is isolated out into
+// a seperate theme that can be called by other pieces of code.
+// So there are ways you can pass arguments to the function and have the function do things with those arguments
+// and perhaps gives a return back value back.This concept is more or less the same.
+// But there are certain new answers which kind of take a turn things are a bit different later,but for the basic
+// part,lets look at the way we traditionally think of functions as,a way to bundle logic that can be reused so,I 
+// am gonna start by creating a simple function called say hello which prints something to the console,the way to 
+// create it is using the function keyword.
+// The way to execute the function is using the name of the function with the same open close braces.
+// If I were to execute this reload and run,you see hello being printed.
+// I am declaring a function and calling it using its name.
+// 1 function sayHello() {
+// 2   console.log("Hello");
+// 3  }
+
+//   sayHello();   
+
+// When the Javscript Interpreter runs it executes line 1 and says okhie there is a function declaration it registers this
+// function but it does not print anything to the console,the execution comes all the way to line 6 and this is where the 
+// function is called and thats where the control jumps back to line 2 and prints the value to the console,again this is
+// simple function concepts which is kind of common across multiple programming languages.This shouldnt be much of a 
+// surprise to you guys.  
+
+// Functions can aslo take arguments like I said,to say Hello to a person,I want the person name to be passed in as an
+// argument,declare the function as something that accepts arguments,when the argument is passed I can use that argument
+// in my logic,so the way to create and declare an argument to the function is typically.
+// declare something within these parenthesis what are our parameters will a function be.
+// Typically in those situation what you will do is give a data type and the variable name which is going to contain that
+// value that somebody who is calling it would have passed.
+
+// 1 function sayHello(int a,float b) {
+//     // 2   console.log("Hello");
+//     // 3  }
+
+
+// But in javscript we dont these type of typed varibles,everthing is a var --> float and double and all that.
+// so rather than having var a and var b.
+// the language designer start by add var ---> just skip it.
+// You dont have to declare the type or even declare it as a var.
+// just send the list of arguments as list of varibles comma seperated and those get the right values.
+
+1 function sayHello(a, b) {
+    2   console.log("Hello");
+    3
+}
+
+// In this case I just want to take one value which is the name so I am just going to say name,so no var name,no string
+// name just name and say hello to that person
+
+1 function sayHello(name) {
+    2   console.log("Hello" + name);
+    3
+}
+
+// sayHello("Kaushik");
+// You can have multiple paramters as well.
+// The way to send multiple parameters is again by using comma seperated values.
+// sayHello("Kaushik",a,b);
+// You can access the right parameters here again comma seperated,so let me add one more argument and I will show some
+// wierd thing that Javascript does.
+// Adding another argument here:
+1 function sayHello(name, timeOfDay) {
+    2   console.log("Hello" + name
+        + "Time of day is" + timeOfDay);
+    3
+}
+// sayHello("Kaushik","afternoon")
+// Hello Rajat, Time of Day is: afternoon
+// The value is undefined if the values are not passed but shows error to other compilers like C,C++ and Java,etc.
+// On adding extra paramters : 
+
+function sayHello(name, timeOfday) {
+    console.log("Hello " + name + ","
+        + " Time of Day is: " + timeOfday);
+}
+
+sayHello("Rajat", "afternoon", 42);
+  //Hello Rajat, Time of Day is: afternoon
+
+ // The extra arguments are essentially ignored.
+// Javascript is super flexible when it comes to this,it doesnt complain,it just assume certain things based on the 
+// these two rules and then it proceeds with execution.
+// This also has an another implication which is that overloaded functions are not possible in javascript.
+
+// Concept of overloaded functions:
+// It can have multiple functions and this is in some other language like Java or C++,you can have multiple functions 
+// with the same name but with different number of arguments.
+// The compiler matches the argument count if there are multiple functions declared with different argument counts.
+// This is not possibe in javascript,because they can be just one function,for the given name depending on the function,
+// you know,there is no way in which javascript can have,look at the argument count and decide which function to execute
+// no matter what the argument count is.It always going to be the same function making assumptions on your behalf.
+
+//******************************************************************* */
+
+
+
+
+
+
+
+
+
+
+
 
 
 
