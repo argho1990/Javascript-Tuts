@@ -751,6 +751,74 @@ myArray[4] = "bar";
 // You can treat it as an object and add more properties to it and thats where you know you
 // realize that its actually an object underneath.
 // ******************************************************************
+// Wrapper Objects:
+// Wrapper Objects is a concept that does exist in Java.
+// If you are familiar with the java objects for the primitive datatypes,this is very
+// similar.
+// In Java you have objects for String,you have Objects for Boolean,Integer.
+// This is a very similar concept.
+// Is string a primitive?
+var greeting = "Hello World";
+// Its a string available for greeting which contains a string value.
+// which is hello world.
+// There is a way you can access the length of the string.
+// greeting.length = 11
+// If string were to be a primitive how do you use this . notation.
+// . notation kind of gives an idea that it is an Object.--> Object.property
+// Is string greeting here,primitive or an Object.
+// var greeting = "Hello World";
+// undefined
+// greeting
+// "Hello World"
+// greeting.length
+// 11
+// Is greeting an Object or A String.
+// typeof greeting --> "string"
+// If these were to be a primitive,if these were to be a string.
+// How does greeting.length work?
+// How does .length access your work?
+// The reason it works is Javascript has equivalent Objects for each of the primitive data types
+// What are the primitive data types String,Number,Boolean,undefined,null.
+// String primitive has an equivalent object and then when you do something like this.
+// When you do greeting.length,this should automatically fail,if greeting is a primitive.
+// When you access something like this,say string.length what javascript does is,
+// it gets that string and converts it to this equivalent object.
+// When it converts it to that equivalent object,the length property becomes available to it.
+// and then it calls the length property becomes available to it.
+// and then it calls the length property of the Object String.
+// and thats how the length works.
+// greeting.length --> immediately wraps it in the wrapper object,which is a string Object.
+// and . length on the string object gives the length.
+// However if you were to access typeof greeting again,it would still be string.
+// Because when the object is created string primitive to string Object,it is not assigned to 
+// greeting,it is just a temporary Object thats gets created,length property is pulled up 
+// from it and the Object is discarded.
+// Just this one line causes this object to be created,length accessed,the Object is gone.
+// The Object gets created for a fraction of seconds,just to make that variable.length work.
+// This happens for the primitives:
+// Four primitive Object Wrappers:
+//  1. String : String is a Primitive as well as an Object. 
+//  2. Number : Number is a Primitive as well as a Number.
+//  3. Boolean: Boolean has an Object as well as a primitive.
+//  4. Symbol: Symbol aslo has an Object equivalent
+
+// So,there are things you can to all these Objects which you cannot do with a primitive,but 
+// when you do it javascript intelligently converts from the primitive to the Object just to 
+// make the Operation Work.
+//*****************************************************//
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
