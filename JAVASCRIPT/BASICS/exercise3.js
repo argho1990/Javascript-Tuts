@@ -886,9 +886,9 @@ function sayHello(name, timeOfday) {
 }
 
 sayHello("Rajat", "afternoon", 42);
-  //Hello Rajat, Time of Day is: afternoon
+//Hello Rajat, Time of Day is: afternoon
 
- // The extra arguments are essentially ignored.
+// The extra arguments are essentially ignored.
 // Javascript is super flexible when it comes to this,it doesnt complain,it just assume certain things based on the 
 // these two rules and then it proceeds with execution.
 // This also has an another implication which is that overloaded functions are not possible in javascript.
@@ -901,7 +901,66 @@ sayHello("Rajat", "afternoon", 42);
 // you know,there is no way in which javascript can have,look at the argument count and decide which function to execute
 // no matter what the argument count is.It always going to be the same function making assumptions on your behalf.
 
-//******************************************************************* */
+//********************************************************************//
+
+//Return Values:
+// Any function that does some calculations would probably have a value that the caller is interested in
+// so you have to send it back.
+// The way to send back a value is using the return keyword.
+// The return can send any value it can send a string,it can send the number an object,could be anything.
+// Lets say I return back the string rather than print it in the console.
+function sayHello(name, timeOfday) {
+    return "Hello " + name + ","
+        + " Time of Day is: " + timeOfday;
+}
+
+sayHello("Rajat", "afternoon");
+
+//I can assign the return value to a variable.
+
+var returnValue = sayHello("Rajat", "afternoon");
+
+// when the javascript interpreter runs it goes through these line and it says okhie,the function 
+// registered is going to move on to [var returnValue=sayHello("Rajat","afternoon");],its going to say
+// the right hand side is a function execution so it pulls up the function that was registered and 
+// it executes it so the execution says hey return this value,so its going to hold on to that value,
+// and assign it to the left hand side which is the returnValue.
+
+// The value gets assigned to the returnValue but we are not printing it.
+// If I were to examine the return value varible,the value gets printed.
+// >> returnValue 
+//"Hello Rajat, Time of Day is: afternoon"  
+// return can have multiple datatypes,it can have string,object or whatever could be assigned to a
+// variable.
+// you can aslo have an empty return.
+function sayHello(name, timeOfday) {
+    return;
+}
+
+var returnValue = sayHello("Rajat", "afternoon");
+console.log(returnValue);
+
+//the return value will be undefined.
+// because a function which explicitly doesnt return a value is going to return an undefined value.
+// or you dont have anything here.
+
+function sayHello(name, timeOfday) {
+    console.log();
+}
+
+var returnValue = sayHello("Rajat", "afternoon");
+console.log(returnValue);
+
+ //this function doesnt have an return statement and even this returns undefined.
+// so you either return an explicit value and that what gets returned.
+// or it returns undefined.
+
+
+
+
+
+
+
 
 
 
