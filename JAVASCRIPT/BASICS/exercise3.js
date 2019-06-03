@@ -951,9 +951,80 @@ function sayHello(name, timeOfday) {
 var returnValue = sayHello("Rajat", "afternoon");
 console.log(returnValue);
 
- //this function doesnt have an return statement and even this returns undefined.
+//this function doesnt have an return statement and even this returns undefined.
 // so you either return an explicit value and that what gets returned.
 // or it returns undefined.
+
+///********************************/
+// Function Declaration,you are declaring a function,hey this is the function and this is the logic
+// that I want to execute when that function is called so this is typically declared as function declaration
+
+// Function declaratio is one of 2 ways you can create functions,there are primary ways,the other way of creating
+// functions is whats called a function expression.
+// In order to explain what function expression is I should tell you about functions in javascript.
+// and their peculiar nature when compared to methods in C++ and Java.
+
+// Functions in javascript are called First Class Values.
+// which means functions are actually values in javascript,just as much as a string as a value or
+// the number hundred as a value.Similarly functions are also values,this is the different from the 
+// function returning a value functions return a value in all those languages.  
+
+//But the function itself is a value in javascript.
+
+// Think of a typicall variable holding a value.
+
+var a = "Hello";
+
+// I am having an inline string,called hello which is a value and assigning the value to a variable,
+// which is a.
+// Similarly I can create a variable say f,and then create a function,and assign a function to the \
+// variable.
+// I am not executing and assigning the return type,I am assigning the function itself.
+// Function is a thing which gets assigned to the variable,its a little bit weird,lets say I have a 
+// Just like I created an inline string,I can create an inline function.
+var f = function foo() {
+    console.log("Hello");
+}
+
+// With this I have created a function and assigned it to the varible f.
+// This part is what we saw before.
+function foo() {
+    console.log("Hello");
+}
+
+// This was a function declaration.
+// Not only can you can that,you can take that declared function and assign it to the variable f.
+// f is going to contain that function.
+// the function is not yet executed.
+// I cannot stress that enough.
+// foo is going to execute and then the returned values assigned to f.
+// the function itself is assigned to f.
+// Now,once the function is assigned to that variable.
+// You can use that variable in order to execute the function.
+// So,wherever I have something like this where f contains the function.
+
+var f = function foo() {
+    console.log("Hello");
+};
+
+f();
+
+// open close braces,just like I would do with the other function declaration that we did before.
+// Now when I do this,javascript is going to say okhie "f" is being executed as a function,so let me check
+// the value of "f" and see if that value happens to be a function instance.
+// Turns out its a function instance,so the javascript interpreter is going to execute that function and 
+// console.log("Hello") should be printed on.
+// The hello should be printed on the console.
+// Hello look its printed.
+
+
+
+
+
+
+
+
+
 
 
 
