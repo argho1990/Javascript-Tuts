@@ -1017,6 +1017,82 @@ f();
 // The hello should be printed on the console.
 // Hello look its printed.
 
+// Anonymous Function Expression:
+
+var f = function foo() {
+    console.log("Hello");
+};
+
+// This contrasts with the other way of creating functions which we saw before where is a function 
+// declaration,I were to take this code out and write a function this way,this is a function declaration,
+// and this is a function expression I dont need a semicolon for a function declaration.
+
+function foo() {
+    console.log("Hello");
+}
+
+// A function expression its good to have a semicolon;
+// because this is just like any other expression or something equals somethimg.
+
+// You add a semicolon in the end.
+// So,these are the 2 primary ways in which you can create functions.
+
+// This we say as a function expression:
+var f = function foo() {
+    console.log("Hello");
+};
+
+// And we are assigning this function to a variable called f.
+// And we are using f to execute it.
+// We also have a name foo for this function and we never use foo right.
+// We never call this function with foo.{}
+
+//Since we are using the varible f and with the name f and I dont this foo here.
+//Actually I can actually get rid of this.
+
+var f = function () {
+    console.log("Hello");
+};
+
+//And this will actually still work.
+//We will still get Hello printed.
+
+// This way of creating functions is called Anonymous Function Expression.
+// When you have a function expression where you use the function expression with the variable we
+// have assigned it to and you.
+// You dont really use the name so we might as well have it anonymous.
+// The tricky thing about an anonyomous expression is you are basically creating an inline function,
+// just like you create an inline string and then you assign it to a variable.
+// Now if you assign something else to this variable,this function will get lost.
+
+var f = function () {
+    console.log("Hello");
+};
+
+f();
+
+//lets say f = 1;
+f();
+//This is no longer going to work because f is no longer containing a function value,containing a number
+//value.
+//So,this is going to get me an error.
+
+/*
+Exception: TypeError: f is not a function
+@Scratchpad/1:8:1
+*/
+
+//f is not a function anymore.
+//f has been changed to a number value.
+
+// This is one drawback of using an anonymous function.
+// because you might lose the value that you have but you dont typically do that.
+
+//*****************************************//
+
+
+
+
 
 
 
