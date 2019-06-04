@@ -1090,6 +1090,105 @@ Exception: TypeError: f is not a function
 
 //*****************************************//
 
+//Functions as arguments:
+// Understand a variable pointing to a function,pass it around.Think about all the things you can do
+// with a variable and a value.Anything you can do with a standard value you can do with a function.
+// because a function is a value.
+// So lets say a variable which is a string,you can pass the string as an argument to another function,
+// Similarly a variable is a function,you can actually pass that function,function as an argument to 
+// another function.
+// So,you can have another function which executes the function that you pass to it.
+
+var f = function () {
+    console.log("Hello");
+}
+
+var executor = function (fn) {
+    console.log(fn)
+}
+
+executor(f);
+
+//If I pass with the string,its going to take that string,now I can pass a function as well.
+//Now whats the function we have here:
+//"f" is variable which contains a function.
+//The executor function takes that input and it prints this function.
+//Its doesnt print the content : Output ---> function f()
+
+var f = function () {
+    console.log("Hello");
+}
+
+var executor = function (fn) {
+    fn(); //--> executes the function f.
+}
+
+executor(f);
+
+//This is how we can pass functions and execute them in other functions.
+
+// If these were to take sub arguments:
+
+var f = function (name) {
+    console.log("Hello " + name);
+}
+
+var executor = function (fn, name) {
+    fn(name); //--> executes the function f.
+}
+
+executor(f, "Rajat");
+
+//You can pass an argument to another function 
+
+//Functions on Objects:
+//When we were talking on objects anything you can assign to a variable.
+//You can also assign to a OBJECT PROPERTY.
+//You can put a string inside a variable,you can put a string inside an Object Property.
+//You can have object inside varibles.
+//An object property can be another object.
+//Now we have looked at functions which we can assign as variables.
+
+//Now can you add a function as a object property.
+//Yes --> How we have methods in javascript.
+//In languages like java and c++,you have a class with member variables and  method definition.
+//You dont have a class with method defintions.
+//What you have instead is objects with properties could potentially be functions.
+//Now if you have an object which has a property thats a function.
+//Then you have an object with a method like you would traditionally think of.
+
+var myObject = {
+    "testProp": true
+};
+
+myObj.myMethod = function () {
+    console.log("Function in object"); //---> Function Expression.
+}
+
+//Here it is being assigned to a property of an Object.
+//It works pretty much the same way just you would access any property using object variable name [.]dot
+//propertyname.accessor
+//You can exactly do the same thing here.
+//In order to execute this method.
+myObj.myMethod// -->gives the function property./
+//To execute:
+myObj.myMethod();//--> going to get the object reference get the property and its going to get that 
+ // function instance and the () parethesis is going to execute that function.
+ // console.log should be printed.
+ // This is how you do objects with the functions as a part of those objects.
+ // Again its not a class,its a function classified as a template as blueprint.
+ // Its just one of the other properties.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
