@@ -1173,11 +1173,111 @@ myObj.myMethod = function () {
 myObj.myMethod// -->gives the function property./
 //To execute:
 myObj.myMethod();//--> going to get the object reference get the property and its going to get that 
- // function instance and the () parethesis is going to execute that function.
- // console.log should be printed.
- // This is how you do objects with the functions as a part of those objects.
- // Again its not a class,its a function classified as a template as blueprint.
- // Its just one of the other properties.
+// function instance and the () parethesis is going to execute that function.
+// console.log should be printed.
+// This is how you do objects with the functions as a part of those objects.
+// Again its not a class,its a function classified as a template as blueprint.
+// Its just one of the other properties.
+
+//**************************************************//
+
+//this operator:
+
+
+var person = {
+    "firstName": "Rajat",
+    "secondName": "Sengupta",
+    "getFullName": function () {
+        return "Not implemented yet";
+    }
+};
+
+
+person.getFullName();//--> return whatever the function returns here.
+var fullName = person.getFullName();
+console.log(fullName);
+
+//Add the logic:
+var person = {
+    "firstName": "Rajat",
+    "secondName": "Sengupta",
+    "getFullName": function () {
+        return person.firstName + " " + person.secondName; // two strings added up.
+    }
+};
+
+person.getFullName();//--> return whatever the function returns here.
+var fullName = person.getFullName();
+console.log(fullName);
+
+// there is a risk involved in this code.
+// guess the drawbacks:
+// confused with the order of initialization.
+return person.firstName + " " + person.secondName;
+//accesing person but doing it inside the initialization block of the person object.
+// is there a chance that the person object is not ready when this line gets executed.
+// it doesnt have the problem.
+return person.firstName + " " + person.secondName;
+// gets executed only when 
+
+var fullName = person.getFullName(); //gets executed
+
+//initializes the function but doesnt really execute it.
+var person = {
+    "firstName": "Rajat",
+    "secondName": "Sengupta",
+    "getFullName": function () {
+        return person.firstName + " " + person.secondName; // two strings added up.
+    }
+};
+
+return person.firstName + " " + person.secondName;// excutes only when 
+person.getFullName();// is called.
+// no risk of accessing of an object which is not fully prepared.
+
+//you can access the person object while the person object is being constructed.
+// because all the this block does it takes a function and assigns it to a property.
+// doesnt care whats inside the function.
+// whats inside the function matters only when the function is being called.
+// by the time the function is being called.
+// by the time the function is being called,the person object is fully initialized.
+// no risk of using an object thats partially being in use thats not an issue.
+
+// the issue you are depending upon the name of the variable,inside the object.
+// now this works fine we have tested it
+
+// Assume there is some other piece of code that does something like this.
+
+person = {};
+
+// now I lose the object because that was assigned to person.
+// assigning a new object to it.
+
+//object initialized Before:
+var person = {
+    "firstName": "Rajat",
+    "secondName": "Sengupta",
+    "getFullName": function () {
+        return person.firstName + " " + person.secondName;
+    }
+};
+
+// in now gone.
+// Since objects are essentially pointing to a location in memory.
+// what if i hold onto some other variable.
+// say i have other variable here.
+var person2 = person;
+//now I have person intialized to an empty object that I initialized before still exists
+person = {};
+//but the name pointing to that object is person2.
+// since these variables are only pointers.
+// I should get:
+person2.getFullName();
+
+
+
+
+
 
 
 
